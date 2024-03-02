@@ -1,38 +1,23 @@
-﻿// OOPLab2Tpl.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
-#include "Tasks.h"
-#include "Examples.h"
 
+static int Task1() {
+    int a, b, c, d, x, y;
 
-/// @brief 
-/// @return 
-int main()
-{
-    cout << "OOP. Template for laboratory work #2.\n";
+    cout << "Enter integers a and b:";
+    cin >> a >> b;
+    cout << "Enter integers c and d:";
+    cin >> c >> d;
 
-    char ch = '5';
-    do {
-        system("cls");
-        MenuTask();
-        ch = cin.get();
-        
-        cin.get();
+    x = ((((b << 4) + b) + ((a << 11) + (a << 9) + (a << 8) + (a << 7) + (a << 6) + (a << 2))) >> 5) - ((c << 6) + (c << 5) + (c << 4) + (c << 3)) + ((d << 7) - d);
 
-        switch (ch) {
-        case '1': task1();   break;
-        case '2': task1();   break;
-        case '3': task1();   break;
-        case '4': task1();   break;
-		case '5':  Examples(); break;
-		case '6': return 0;
-	    }
-        cout << " Press any key and enter\n";
-        ch = cin.get();
-    } while (ch != '6');
+    y = (17 * b + 3012 * a) / 32 - c * 120 + d * 127;
 
+    cout << " x=" << x << " a=" << a << " b=" << b << " c=" << c << " d=" << d << " y=" << y << endl;
     return 0;
 }
 
+int main()
+{
+    Task1();
+}
