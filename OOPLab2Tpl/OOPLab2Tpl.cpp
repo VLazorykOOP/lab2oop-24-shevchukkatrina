@@ -17,7 +17,29 @@ static int Task1() {
     return 0;
 }
 
+void Task2();
+
 int main()
 {
-    Task1();
+    int choice;
+
+    std::cout << "Choose:" << std::endl;
+    std::cout << "1. Evaluated expression using bitwise shifts." << std::endl;
+    std::cout << "2. Encrypt and decrypt data." << std::endl;
+
+    std::cin >> choice;
+
+    // Використовуємо switch-case для виклику відповідної функції
+    switch (choice) {
+    case 1:
+        Task1();
+        break;
+    case 2:
+        Task2();
+        break;
+    default:
+        std::cout << "Wrong choise" << std::endl;
+    }
+
+    return 0;
 }
