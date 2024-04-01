@@ -40,6 +40,8 @@ void encryptText(const std::string& text, unsigned short* encryptedData) {
 
         // Формування зашифрованого символу
         encryptedData[i] = (position & 0x003F) | (positionParity << 6) | ((asciiCode & 0x007F) << 7) | (asciiParity << 15);
+// 0x003F  = 0000 0000 0111 1111
+	    
         std::cout << "Encrypted " << i << " successfully. Result is: " << std::bitset<16>(encryptedData[i]) << std::endl;
     }
 }
